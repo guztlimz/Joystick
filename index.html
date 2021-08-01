@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>AnimationCSS</title>
+</head>
+<body>
+    
+    <div class="Joystick">
+         <div class="shape">
+            <div class="screen">
+                <div class="reflectEffects">
+                    <div class="reflect"></div>
+                    <div class="reflect sec"></div>
+                </div>
+                <div class="screenContent" id="screenContent">
+                    <p class="title" id="title">PORTFOLIO</p>
+                    <p class="subtitle" id="subtitle">GUSTAVO LIMA</p>
+                    <p class="start" id="start" onclick="start()">Start</p>
+                </div>
+                <div class="screenContentTwo" id="screenContentTwo">
+                    <div id="fixedContent">
+                        <p id="fixedHome" onclick="back()">Back</p>
+                    </div>
+                    <div id="centerContent">
+                        <div class="ShapePhoto" id="ShapePhoto" onclick="redirect()">
+                            <p id="numberPhoto" id="numberPhoto">1</p>
+                        </div>
+                        <div class="workTitle">
+                            <p id="projName">Button Generator</p>
+                            <p id="clickHere">Clique para ver mais</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="buttons">
+                <div class="bLeft" id="bLeft" onclick="LeftButton()">
+                    <svg width="80" height="320" viewBox="0 0 281 320" fill="none" xmlns="http://www.w3.org/2000/svg" class="shadow">
+                    <path d="M9.00003 175.588C-2.99997 168.66 -3.00001 151.34 8.99999 144.412L253.5 3.24941C265.5 -3.67879 280.5 4.98144 280.5 18.8379L280.5 301.162C280.5 315.018 265.5 323.679 253.5 316.751L9.00003 175.588Z"/>
+                    </svg>
+                </div>
+                <div class="bRight" id="bRight" onclick="RightButton()">
+                    <svg width="80" height="320" viewBox="0 0 281 320" fill="none" xmlns="http://www.w3.org/2000/svg" class="shadow">
+                    <path d="M272 144.412C284 151.34 284 168.66 272 175.588L27.5 316.751C15.5 323.679 0.499985 315.019 0.499985 301.162L0.499997 18.8379C0.499998 4.98148 15.5 -3.67881 27.5 3.24939L272 144.412Z"/>
+                    </svg>                    
+                </div>
+            </div>
+            <div class="backgroundColors">
+                <div class="backGroup">
+                    <div class="backFirst one"></div>
+                    <div class="backFirst two"></div>
+                    <div class="backFirst three"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="js/script.js"></script>
+</body>
+</html>

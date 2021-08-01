@@ -1,0 +1,411 @@
+@font-face {
+    font-family: 'Poppins Black';
+    src: url('../fonts/Poppins/Poppins-Black.ttf');
+}
+
+@font-face {
+    font-family: 'Poppins Bold';
+    src: url('../fonts/Poppins/Poppins-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Poppins ExtraBold';
+    src: url('../fonts/Poppins/Poppins-ExtraBold.ttf');
+}
+
+@font-face {
+    font-family: 'Poppins ExtraLight';
+    src: url('../fonts/Poppins/Poppins-ExtraLight.ttf');
+}
+
+@font-face {
+    font-family: 'Poppins Italic';
+    src: url('../fonts/Poppins/Poppins-Italic.ttf');
+}
+
+@font-face {
+    font-family: 'Poppins Light';
+    src: url('../fonts/Poppins/Poppins-Light.ttf');
+}
+
+@font-face {
+    font-family: 'Poppins Medium';
+    src: url('../fonts/Poppins/Poppins-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'Poppins Regular';
+    src: url('../fonts/Poppins/Poppins-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Poppins SemiBold';
+    src: url('../fonts/Poppins/Poppins-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: 'Poppins Thin';
+    src: url('../fonts/Poppins/Poppins-Thin.ttf');
+}
+
+@font-face {
+    font-family: 'Gameplay';
+    src: url('../fonts/gameplay/Gameplay.ttf');
+}
+
+*{
+    margin: 0 auto;
+    user-select: none;
+}
+
+html{   
+    margin:0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+}
+
+body{
+    background-color: rgb(102, 47, 230);
+    height: 100%;
+    width: 100%;
+    max-width :100%;
+    max-height: 100%;
+    overflow: hidden;
+}
+
+.Joystick{
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    max-width :100%;
+    max-height: 100%;
+}
+
+/* Forma do controle / Joystick */
+
+.shape{
+    background-color: rgb(236, 236, 236);
+    height: 500px;
+    width: 1100px;
+    position: absolute;
+    top: 0; bottom: 0;
+    left: 0; right: 0;
+    margin: auto;
+    border-radius: 100px;
+    overflow: hidden;
+    border-bottom: solid rgb(202, 202, 202) 10px;
+    box-shadow: rgba(0, 0, 0, 0.377) 0px 10px 20px;
+    animation-name: float;
+    animation-duration: 2s;
+}
+
+/* Listras / Painting */
+
+.backgroundColors{
+    height: inherit;
+    width: inherit;
+    z-index: 1;
+    position: relative;
+    top: -190%;
+    display: flex;
+}
+
+.backFirst{
+    background-color: rgb(29, 29, 29);
+    height: 20px;
+    width: 1500px;
+    transform: rotate(60deg);
+    position: relative;
+}
+
+.backFirst.one{
+    background-color: rgb(194, 0, 32);
+    left: -0px;
+}
+
+.backFirst.two{
+    background-color: rgb(226, 128, 0);
+    left: -20px;
+}
+
+.backFirst.three{
+    background-color: rgb(214, 211, 2);
+    left: -40px;
+}
+
+
+@keyframes float{
+    from{transform: translateX(-200%);}
+    to{transform:translateX(-0%)}
+}
+
+/* Tela / Screen */
+
+.screen{
+    background-color: rgb(24, 24, 24);
+    height: calc(100% - 60px);
+    width: calc(100% - 300px);
+    border-radius: 10px;
+    position: relative;
+    border: solid rgb(95, 95, 95);
+    border-width: 6px 3px 3px 3px;
+    overflow: hidden;
+    top: 25px;
+    z-index: 2;
+}
+
+/* Reflexos da Tela */
+
+.reflectEffects{
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+
+.reflect{
+    background-color: rgba(255, 255, 255, 0.082);
+    height: 800px;
+    width: 50px;
+    position: relative;
+    top: -150px;
+    transform: rotate(45deg);
+    left: 100px;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.reflect.sec{
+    top: -950px;
+    left: 0px;
+    width: 20px;
+}
+
+/* Home */
+
+.screenContent{
+    color: white;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    top: -590px;
+    transition: transform 0.5s;
+    transform : translateY(-600px);
+    transform : translateY(150px);
+    z-index: 1;
+}
+
+/* Home Content */
+
+.title{
+    position: relative;
+    top: 45%;
+    text-align: center;
+    font-size: 50px;
+    z-index: 1;
+    font-family: 'Gameplay';
+    color: rgba(255, 221, 31, 0.932);
+    animation-name: loopAnimaTitle;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+.subtitle{
+    position: relative;
+    top: 27.5%;
+    text-align: center;
+    letter-spacing: 3px;
+    font-size: 15px;
+    z-index: 1;
+    font-family: 'Poppins Regular';
+    color: rgb(247, 247, 247);
+}
+
+.start{
+    position: relative;
+    top: 60%;
+    text-align: center;
+    font-family: 'Gameplay';
+    z-index: 1;
+    letter-spacing: 3px;
+    color: rgba(31, 248, 255, 0.678);
+    text-shadow: rgba(0, 204, 255, 0.61) 0px 0px 10px;
+    cursor: pointer;
+    animation-name: loopAnima;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+/* Jobs */
+
+.screenContentTwo{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    transition: transform 0.5s;
+    transform:translateY(100%);
+    z-index: 0;
+}
+
+#fixedContent{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+#fixedHome{
+    cursor: pointer;
+    position: relative;
+    top: 15px;
+    left: -45%;
+    right: 0;
+    bottom: 0;
+    color: white;
+    font-family: 'Poppins Medium';
+}
+
+#centerContent{
+    width: 100%;
+    height: 100%;
+    animation-name: loopAnima;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    pointer-events: none;
+}
+
+/* Jobs Content */
+
+.ShapePhoto{
+    background-color: #6924FD;
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    margin: 0;
+    left: 25%;
+    top: 25%;
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 1;
+    transition: 1s;
+    pointer-events:visible;
+    border: solid rgb(255, 255, 255) 0px;
+    -webkit-transition: 1s;
+}
+
+.ShapePhoto:hover{
+    box-shadow: #6924FD 0 0 30px;
+
+    border: solid rgb(255, 255, 255) 5px;
+    -webkit-transition: 0.5s;
+}
+
+#numberPhoto{
+    font-family: 'Poppins Bold';
+    color: rgb(240, 240, 240);
+    position: relative;
+    text-align: end;
+    left: -5%;
+    top: 15%;
+    font-size: 180px;
+}
+
+.workTitle{
+    color: white;
+    position: absolute;
+    font-family: 'Poppins Medium';
+    height: 100%;
+    width: 100%;
+    pointer-events: none;  
+}
+
+.workTitle p{
+    position: relative;
+    top: 19%;
+    left: 25%;
+    text-align: start;
+}
+
+#clickHere{
+    font-size: 11px;
+    top: 15%;
+    left: 60%;
+    font-family: 'Poppins Light';
+}
+
+
+@keyframes loopAnima {
+    0%{
+        transform: translateY(0)
+    }
+    50%{
+        transform:translateY(8px)
+    }
+    
+
+}
+
+/* Botões do Controle / Buttons */
+
+.buttons{
+    display: flex;
+    position: relative;
+    top: -450px;
+    height: 100%;
+    width: 100%;
+
+}
+
+.shadow{
+
+    -webkit-filter: drop-shadow( -3px 2px 0px rgb(0, 0, 0));
+    filter: drop-shadow( -3px 2px 0px rgb(0, 0, 0));
+}
+
+.shadow:active{
+    position: relative;
+    top: 5px;
+    left: -5px;
+    -webkit-filter: drop-shadow( 0px 0px 0px rgb(0, 0, 0));
+    filter: drop-shadow( 0px 0px 0px rgb(0, 0, 0));
+}
+
+.bLeft{
+    position: relative;
+    left: 3%;
+    margin: 0;
+    top: 20%;
+    z-index: 3;
+
+}
+.bLeft path{
+    fill: #1f1f1f;
+    cursor:pointer; 
+}
+.bRight{
+    position: relative;
+    left: 83%;
+    margin: 0;
+    top: 20%;
+    z-index: 3;
+}
+.bRight path{   
+    fill: #1f1f1f;
+    cursor:pointer; 
+}
+
+/* Scroll Vertical */
+
+@media (max-width: 1150px){
+    html{
+        overflow-x: scroll;
+    }
+}
+
